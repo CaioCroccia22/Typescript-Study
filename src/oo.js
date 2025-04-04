@@ -17,6 +17,9 @@ class ContaBancario {
         this.saldo = 0;
         this.numeroConta = numeroDaConta;
     }
+    static retornaNumeroDoBanco() {
+        return 125;
+    }
     getSaldo() {
         return this.saldo;
     }
@@ -29,6 +32,13 @@ class ContaBancariaPessoaFisica extends ContaBancario {
         // Modificador privado é apenas acessível na classe base, as herdeiras não podem acessar
         // Isso quando esta com o modificar 'private'
         // Quando esta com o modificador 'protector' consegue
-        this.saldo;
+        this.saldo = valor * 2;
     }
 }
+const contaDoPedro = new ContaBancariaPessoaFisica(20089);
+ContaBancario.retornaNumeroDoBanco;
+//Propriedade protegida -> Acessivel dentro da propria classe e dentro das classe filhas
+// Publico -> Acessivel em todos os niveis
+//Privado -> Acessivel so dentro da propria classe
+//O metodos também podem ter modificadores
+//Estatico -> Pertence a classe a não a instância, não precisa do new
